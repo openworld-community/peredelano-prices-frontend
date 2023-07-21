@@ -1,30 +1,12 @@
-import GlobalNav from "@/components/layout/GlobalNav";
-import "./globals.css";
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import Header from "@/components/layout/Header";
+import { ReactNode } from "react";
+import "./globals.scss";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export const metadata: Metadata = {
-  title: "Peredelano Prices",
-  description: "Compare your prices from different stores!",
+type Props = {
+  children: ReactNode;
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  return (
-    <html lang="en">
-      <body
-        className={`${inter.className} dark:bg-gray-900 box-border bg-gray-50 overflow-y-auto min-h-screen`}
-      >
-        <Header />
-        <GlobalNav />
-        <main className="lg:pt-16 lg:pl-80">{children}</main>
-      </body>
-    </html>
-  );
+// Since we have a `not-found.tsx` page on the root, a layout file
+// is required, even if it's just passing children through.
+export default function RootLayout({ children }: Props) {
+  return children;
 }
