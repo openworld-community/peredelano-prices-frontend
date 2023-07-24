@@ -17,7 +17,7 @@ const SubCategoryCard = ({ data }: { data: SubCategory }) => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{data.name}</h2>{" "}
+        <h2 className="card-title">{data.name}</h2>
       </div>
     </div>
   );
