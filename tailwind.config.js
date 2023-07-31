@@ -1,5 +1,5 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
@@ -9,7 +9,17 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
-  daisyui: {},
+  daisyui: {
+    themes: [
+      {
+        light: {
+          ...require("daisyui/src/theming/themes")["[data-theme=light]"],
+          primary: "#7612C9",
+          "primary-focus": "#B659FF",
+        },
+      },
+    ],
+  },
   theme: {
     extend: {
       fontFamily: {

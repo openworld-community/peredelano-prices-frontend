@@ -18,7 +18,7 @@ export default function RootLayout({ children }: LayoutProps) {
     <html lang="ru" className="h-full">
       <body className="box-border bg-base-100 h-full">
         <Header />
-        <main>{children}</main>
+        <main className="mx-auto container">{children}</main>
       </body>
     </html>
   );
