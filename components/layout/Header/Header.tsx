@@ -2,6 +2,11 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 
+import GlobeIcon from "/public/icons/globe.svg";
+import ProfileIcon from "/public/icons/profile.svg";
+import FavoritesIcon from "/public/icons/favorites.svg";
+import LocationIcon from "/public/icons/location.svg";
+
 const NavBar = () => {
   return (
     <header className="h-[100px] navbar bg-base-300 border-b border-solid border-base-400">
@@ -16,7 +21,28 @@ const NavBar = () => {
         </Link>
       </div>
       <div className="navbar-end">
-        <ul className="menu menu-horizontal bg-base-200 rounded-box mr-4"></ul>
+        <ul className="menu menu-horizontal bg-base-200 mr-4 bg-transparent">
+          <li>
+            <a className="p-2">
+              <LocationIcon />
+            </a>
+          </li>
+          <li>
+            <a className="p-2">
+              <FavoritesIcon />
+            </a>
+          </li>
+          <li>
+            <a className="p-2">
+              <ProfileIcon />
+            </a>
+          </li>
+          <li>
+            <a className="p-2">
+              <GlobeIcon />
+            </a>
+          </li>
+        </ul>
       </div>
     </header>
   );
