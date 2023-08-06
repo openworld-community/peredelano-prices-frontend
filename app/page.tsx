@@ -1,4 +1,4 @@
-import SubCategoryCard from "@/components/custom/Product";
+import SubCategoryCard from "@/components/custom/Product/Product";
 import { SubCategory } from "@/lib/interfaces/Category";
 
 const getSubCategories = async () => {
