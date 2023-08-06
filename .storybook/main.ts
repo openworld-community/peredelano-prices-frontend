@@ -10,15 +10,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-onboarding",
     "@storybook/addon-interactions",
-    {
-      name: "@storybook/addon-styling",
-      options: {
-        sass: {
-          // Require your Sass preprocessor here
-          implementation: require('sass'),
-        },
-      },
-    }
+    "@storybook/addon-styling",
   ],
   framework: {
     name: "@storybook/nextjs",
