@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from "react";
 
-import "./index.scss";
+import "./Dropdown.scss";
 
 interface DropdownProps extends HTMLAttributes<HTMLDivElement> {
   triggerElement: React.ReactNode;

@@ -2,7 +2,7 @@ import { SubCategory } from "@/lib/interfaces/Category";
 import Image from "next/image";
 import React from "react";
 
-import "./index.scss";
+import "./Product.scss";
 
 const SubCategoryCard = ({ data }: { data: SubCategory }) => {
   return (
